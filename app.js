@@ -48,7 +48,7 @@ io.sockets.on('connection', function(socket){
 
 	socket.on('disconnect', function(data) {
 		if(!socket.username) return;
-		usernames.splice(usernames,indexOf(socket.username), 1);
+		usernames.splice(usernames.indexOf(socket.username), 1);
 		updateUsernames();
 	});
 	
