@@ -1,10 +1,10 @@
 //Set-up client-side JS
 
 var express = require('express'),
-app = express(),
-server = require('http').createServer(app),
-io = require('socket.io').listen(server);
-usernames = [];
+    app = express(),
+    server = require('http').createServer(app),
+    io = require('socket.io').listen(server);
+    usernames = [];
 
 //Set-up a port
 //process.env.PORT is set-up for remote servers like heroku
@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/index.html');
 });
 
-
+//On connection start the sockets
 io.sockets.on('connection', function(socket){
 
 	socket.on('new user', function(data, callback) {
@@ -34,7 +34,6 @@ io.sockets.on('connection', function(socket){
 	});
 
 	//Update Usernames
-
 	function updateUsernames() {
 		io.sockets.emit('usernames', usernames);
 	}
@@ -45,11 +44,9 @@ io.sockets.on('connection', function(socket){
 	});
 
 	// Disconnect and delete usernames
-
 	socket.on('disconnect', function(data) {
 		if(!socket.username) return;
 		usernames.splice(usernames.indexOf(socket.username), 1);
 		updateUsernames();
 	});
-	
 });
