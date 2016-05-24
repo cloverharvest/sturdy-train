@@ -1,4 +1,4 @@
-//Set-up client-side JS
+//Set-up SERVER-SIDE JS
 
 var express = require('express'),
     app = express(),
