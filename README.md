@@ -10,7 +10,7 @@ User leaves the chat and gets disconnected by closing his/her window
 
 Future plans:
 
-1) Build a database for users and chats (MongoDB?)
+1) Build a database for users and chats
 
 2) Require login and password
 
