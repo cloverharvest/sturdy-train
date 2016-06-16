@@ -1,6 +1,6 @@
 README.md
 
-CHAT APP
+##CHAT APP
 
 This is a practice for a simple chat app using Express.JS, Socket.io, HTML, CSS.
 
@@ -15,3 +15,5 @@ Future plans:
 2) Require login and password
 
 3) Chime to notify current users of arrival of new user.
+
+### Read more about this on [Socket.io Gist] (https://gist.github.com/cloverharvest/d429dab94929e041042a46122b85fec4)
